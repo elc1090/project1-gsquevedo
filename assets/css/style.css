@@ -18,8 +18,67 @@ a:hover {
     text-decoration: none;
 }
 
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 9997;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+@media (max-width: 991px) {
+    #header {
+        width: 300px;
+        background: #fff;
+        border-right: 1px solid #e6e9ec;
+        left: -300px;
+    }
+}
+
+@media (min-width: 991px) {
+    #main {
+        margin-left: 100px;
+    }
+}
+  
+.back-to-top {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    right: 15px;
+    bottom: 15px;
+    z-index: 996;
+    background: #0563bb;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+}
+  
+.back-to-top i {
+    font-size: 28px;
+    color: #fff;
+    line-height: 0;
+}
+  
+.back-to-top:hover {
+    background: #0678e3;
+    color: #fff;
+}
+  
+.back-to-top.active {
+    visibility: visible;
+    opacity: 1;
+}
+
 .nav-menu * {
     list-style: none;  
+}
+
+.nav-menu li {
+    position: relative;
+    white-space: nowrap;
 }
 
 .nav-menu a {
@@ -31,27 +90,13 @@ a:hover {
     font-size: 20px;
     border-radius: 50px;
     background: #f2f3f5;
-    height: 55px;
+    height: 50px;
     width: 100%;
-    overflow: hidden;
 }
 
 .nav-menu a:hover {
     color: #fff;
     background: #0563bb;
-}
-
-#header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    z-index: 9997;
-    transition: all 0.5s;
-    padding: 10px;
-    overflow-y: auto;
-    justify-content: center;
-    display: flex;
 }
 
 #home {
@@ -147,17 +192,12 @@ a:hover {
     #techs {
         margin-top: 0;
     }
-      
-
+    
 }
 
 section { 
     padding: 40px 10px;
     overflow: hidden;
-}
-
-img {
-    margin-left: 20px;
 }
 
 .section-title {
@@ -198,7 +238,6 @@ img {
 
 #sobre .content ul i{
     color: #0563bb;
-    margin-right: 10px;
     font-size: 18px;
     line-height: 0;
 }
@@ -210,14 +249,6 @@ img {
 #sobre .row li{
     list-style: none;  
     margin-bottom: 10px;
-}
-
-#sobre img {
-    margin-left: 20px;
-}
-
-#techs {
-    margin-left: 40px;
 }
 
 .techs .progress {
@@ -284,10 +315,6 @@ img {
 .qualidades .count-box p {
     font-family: "Raleway", sans-serif;
     font-size: 20px;
-}
-
-#resumo {
-    margin-left: 40px;
 }
 
 .resumo-title {
@@ -367,6 +394,18 @@ img {
     color: #728394;
 }
 
+.contact-info .email,
+.contact-info .phone {
+  margin-top: 40px;
+}
+
+.contact-info .email:hover i,
+.contact-info .address:hover i,
+.contact-info .phone:hover i {
+  background: #0563bb;
+  color: #fff;
+}
+
 .php-email-form input {
     height: 44px;
 }
@@ -389,11 +428,11 @@ img {
 }
 
 #footer {
-    background: #e0e4e6;
+    background: #e6e8e9;
     color: #45505b;
     font-size: 14px;
     text-align: center;
-    padding: 30px 0;
+    padding: 15px 0;
 }
 
 #footer h3 {
@@ -402,18 +441,18 @@ img {
     position: relative;
     font-family: "Poppins", sans-serif;
     padding: 0;
-    margin: 0 0 15px 0;
+    margin: 0 0 10px 0;
 }
 
 #footer p {
     font-size: 15;
     font-style: italic;
     padding: 0;
-    margin: 0 0 40px 0;
+    margin: 0 0 20px 0;
 }
 
 #footer .social-links {
-    margin: 0 0 40px 0;
+    margin: 20px 10px;
 }
 
 #footer .social-links a {
