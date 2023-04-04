@@ -1,5 +1,23 @@
 $(document).ready(function() {
 
+    let navbarlinks = $('#navbar .scrollto');
+    const navbarlinksActive = () => {
+      let position = $(window).scrollTop() + 200;
+      navbarlinks.each(function() {
+        if (!$(this).attr('href')) return;
+        let section = $($(this).attr('href'));
+        if (!section.length) return;
+        if (position >= section.offset().top && position <= (section.offset().top + section.outerHeight())) {
+          $(this).addClass('active');
+        } else {
+          $(this).removeClass('active');
+        }
+      });
+    }
+    navbarlinksActive();
+    $(window).scroll(navbarlinksActive);
+  
+
     const scrollto = (el) => {
       let elementPos = $(el).offset().top;
       $('html, body').animate({
