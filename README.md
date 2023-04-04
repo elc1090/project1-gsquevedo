@@ -2,7 +2,7 @@
 Substitua a imagem por pelo menos um screenshot do projeto (arquivo pode ser armazenado no repositório ou em URL externa). GIFs animados também são permitidos!
 
 ### Screenshot do projeto.
-![screenshot](../img/screen.png)
+![screenshot](.../img/screen.png)
 
 ### Desenvolvedor(a)
 Gabriele Soares Quevedo
