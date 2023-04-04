@@ -2,18 +2,19 @@ $(document).ready(function() {
 
     let navbarlinks = $('#navbar .scrollto');
     const navbarlinksActive = () => {
-      let position = $(window).scrollTop() + 200;
+      let position = $(window).scrollTop();
       navbarlinks.each(function() {
         if (!$(this).attr('href')) return;
         let section = $($(this).attr('href'));
         if (!section.length) return;
-        if (position >= section.offset().top && position <= (section.offset().top + section.outerHeight())) {
+        if (position >= section.offset().top && position <= (section.offset().top + section.height())) {
           $(this).addClass('active');
         } else {
           $(this).removeClass('active');
         }
       });
     }
+    console.log(navbarlinks)
     navbarlinksActive();
     $(window).scroll(navbarlinksActive);
   

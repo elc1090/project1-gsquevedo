@@ -99,6 +99,12 @@ a:hover {
     background: #0563bb;
 }
 
+
+.nav-menu .active{
+  color: #fff;
+  background: #0563bb;
+}
+
 #home {
     background: url("../img/img.jpg") top right no-repeat;
     width: 100%;
